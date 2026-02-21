@@ -1,424 +1,444 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nagendra Varma | Python & React Developer</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/skins/color-1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
-    <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
-    <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
-    <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
-    <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="css/style-switcher.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
+  <meta name="description" content="Portfolio of Nagendra Varma — Python & React Developer. Real-time systems, Kafka, Kubernetes, GCP/AWS, and scalable enterprise applications." />
+
+  <style>
+    /* Smooth section offset for sticky header */
+    section { scroll-margin-top: 90px; }
+  </style>
 </head>
 
-<body>
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+  <!-- Top Gradient Glow -->
+  <div class="pointer-events-none fixed inset-x-0 top-0 h-72 bg-gradient-to-b from-indigo-200/50 to-transparent blur-2xl dark:from-indigo-900/30"></div>
 
-    <div class="main-container">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-slate-200/60 bg-white/80 backdrop-blur dark:border-slate-800/70 dark:bg-slate-950/70">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <a href="#home" class="flex items-center gap-2 font-semibold tracking-tight">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900">NV</span>
+        <span>Nagendra Varma</span>
+      </a>
 
-        <div class="aside">
-            <div class="logo">
-                <a href="#"><span>Varma</span></a>
-            </div>
+      <nav class="hidden items-center gap-6 md:flex">
+        <a class="text-sm text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white" href="#about">About</a>
+        <a class="text-sm text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white" href="#skills">Skills</a>
+        <a class="text-sm text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white" href="#experience">Experience</a>
+        <a class="text-sm text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white" href="#projects">Projects</a>
+        <a class="text-sm text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white" href="#contact">Contact</a>
+      </nav>
 
-            <div class="nav-toggler">
-                <span></span>
-            </div>
+      <div class="flex items-center gap-2">
+        <button id="themeBtn"
+          class="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-200 dark:hover:bg-slate-900">
+          <i class="fa-solid fa-moon"></i>
+          <span class="hidden sm:inline">Theme</span>
+        </button>
 
-            <ul class="nav">
-                <li><a href="#home" class="nav-item active"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="#about" class="nav-item"><i class="fa fa-user"></i>About</a></li>
-                <li><a href="#services" class="nav-item"><i class="fa fa-list"></i>Services</a></li>
-                <li><a href="#portfolio" class="nav-item"><i class="fa fa-briefcase"></i>Portfolio</a></li>
-                <li><a href="#contact" class="nav-item""><i class="fa fa-comments"></i>Contact</a></li>
-            </ul>
-        </div>
-
-        <div class="main-content">
-            <section class="home section " id="home">
-                <div class="container">
-                    <div class="row">
-                        <div class="home-info padd-15">
-                            <h3 class="hello">Hey there! I'm <span class="name">Nagendra Varma</span></h3>
-                            <h3 class="my-profission">I'm all about that <span class="typing">Back-end</span> magic!
-                            </h3>
-                            <!-- <h3 class="my-profession">I'm a <span class="typing">Back-end Developer</span></h3> -->
-                            <br>
-                            <p>As a dedicated back-end developer, I thrive on building and deploying robust, scalable
-                                systems. With top-ranked academic achievements and hands-on experience in technologies
-                                like Python, Kafka and GCP, I actively seek knowledge through technical training and
-                                leadership roles. My problem-solving skills and industry awareness drive me to deliver
-                                impactful solutions in every project. Eager and driven, I'm excited for the challenges
-                                and innovations ahead !<br><br>
-                                Let's make some magic together !
-                            </p>
-                            <a href="#contact" class="btn hire-me">Hire Me</a>
-                        </div>
-                        <div class="home-img padd-15">
-                            <div class="half-circle"></div>
-                            <img src="images/varma.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="about section " id="about">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>About Me</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="about-content padd-15">
-                            <div class="row">
-                                <div class="about-text padd-15">
-                                    <h3>I'm Nagendra Varma a <span>Back-end Developer</span></h3>
-                                    <p>A passionate back-end developer pursuing a degree in computer science.
-                                        Specialized
-                                        in build, develop and deploy robust and scalable back-end systems. With a
-                                        commitment to excellence, I’m known for my problem-solving skills and adeptness
-                                        at meeting deadlines. A fast learner, I stay updated on industry trends through
-                                        self-study, bringing technical expertise and enthusiasm to contribute to
-                                        impactful projects.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="personal-info padd-15">
-                                    <ul class="info-list row">
-                                        <li class="info-item padd-15">
-                                            <p>Degree : <span>Computer Sciences</span></p>
-                                        </li>
-                                        <li class="info-item padd-15">
-                                            <p>Location : <span>Ottawa, Canada</span></p>
-                                        </li>
-                                    </ul>
-                                    <div class="row">
-                                        <div class="buttons padd-15">
-                                            <a href="#contact" class="btn hire-me">Hire Me</a>
-                                            <a href="CV/Varma.pdf" class="btn outlined-btn">Download CV</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="padd-15 skills">
-                                    <ul class="skills-list row">
-                                        <li class="skill-item padd-15">
-                                            <h5>Python</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 86%;"></div>
-                                                <div class="skill-percent">85%</div>
-                                            </div>
-                                        </li>
-                                        <li class="skill-item padd-15">
-                                            <h5>Django</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 60%;"></div>
-                                                <div class="skill-percent">70%</div>
-                                            </div>
-                                        </li>
-                                        <li class="skill-item padd-15">
-                                            <h5> Docker</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 70%;"></div>
-                                                <div class="skill-percent">60%</div>
-                                            </div>
-                                        </li>
-                                        <li class="skill-item padd-15">
-                                            <h5> CI/CD Pipeline</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 66%;"></div>
-                                                <div class="skill-percent">60%</div>
-                                            </div>
-                                        </li>
-                                        <li class="skill-item padd-15">
-                                            <h5>GCP</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 77%;"></div>
-                                                <div class="skill-percent">65%</div>
-                                            </div>
-                                        </li>
-                                        <li class="skill-item padd-15">
-                                            <h5> Git & Github</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 80%;"></div>
-                                                <div class="skill-percent">80%</div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="education padd-15">
-                                    <h3 class="title">Education</h3>
-                                    <div class="row">
-                                        <div class="timeline-box padd-15">
-                                            <div class="timeline shadow-dark">
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> Sep 2019- Jan 2021
-                                                    </h3>
-                                                    <h4 class="timeline-title">M.S. in Systems Science</h4>
-                                                    <p class="timeline-text">University of Ottawa
-                                                        <br><b>CGPA: 9.0</b>
-                                                    </p>
-                                                </div>
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> Aug 2012 - Aug 2016
-                                                    </h3>
-                                                    <h4 class="timeline-title">B. Tech. in Information Technology </h4>
-                                                    <p class="timeline-text">Mohan Babu University,
-                                                        Andhra Pradesh, India.<br><b>GPA: 89.6%</b></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="experience padd-15">
-                                    <h3 class="title">Experience</h3>
-                                    <div class="row">
-                                        <div class="timeline-box padd-15">
-                                            <div class="timeline shadow-dark">
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h4 class="timeline-title">Software Developer, Infosys - CN
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> Jul 2024 - Current, Montreal, Canada
-                                                    </h3>
-                                                    </h4>
-                                                    <p class="timeline-text">Engineered robust backend solutions using Python, Flask, and Kafka, 
-                                                        enhancing system reliability and data processing efficiency.
-                                                    </p>
-                                                </div>
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h4 class="timeline-title">Full stack Developer, Boast Capital</h4>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> Dec 2021 - Jun 2024, Ottawa, Canada
-                                                    </h3>
-                                                    <p class="timeline-text">Designed and developed full-stack applications using Python, Django for backend, 
-                                                        and TypeScript for dynamic and responsive front-end, ensuring seamless integration and high performance.</p>
-                                                </div>
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h4 class="timeline-title"> Python/ Django Developer, Wipro</h4>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> May 2021 - Dec 2021(Ottawa, Canada) <br>
-                                                        Dec 2016 - Aug 2019 (Bangalore, India)
-                                                    </h3>
-                                                    <p class="timeline-text">Developed scalable web applications using Python and Django, implementing RESTful APIs 
-                                                        and optimizing database interactions to improve application performance and user experience.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="service section " id="services">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title">
-                            <h2>Services</h2>
-                        </div>
-                        <h2>What I'm Doing ?</h2>
-                    </div>
-                    <ul class="services-list row">
-                        <li class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-laptop-code"></i>
-                                </div>
-                                <h4>Back-end Development</h4>
-                                <p>Specialized in architecting, developing, and deploying robust and scalable back-end
-                                    systems using Express JS and Django frameworks.</p>
-                            </div>
-                        </li>
-                        <li class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-solid fa-search"></i>
-                                </div>
-                                <h4>Research in CS</h4>
-                                <p>Passionate about exploring advanced topics and staying updated with the latest
-                                    methodologies in Computer Science research.</p>
-                            </div>
-                        </li>
-                        <li class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-solid fa-book-open"></i>
-                                </div>
-                                <h4>Self-learning</h4>
-                                <p>Self-learner in frontend dev with HTML, CSS, JavaScript for user experiences. Driven
-                                    by curiosity, honing skills through DataCamp.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="portfolio section " id="portfolio">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Portfolio</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="portfolio-heading padd-15">
-                            <h2>My Last Projects :</h2>
-                        </div>
-                    </div>
-                    <ul class="portfolio-list row">
-                        <li class="portfolio-item padd-15">
-                            <a href="https://github.com/NagendraVarmaSangaraju/Accounts" target="_blank">
-                                <h2>Accounting System</h2>
-                                <div class="portfolio-item-inner shadow-dark">
-                                    <div class="portfolio-img">
-                                        <img src="images/Accounting.jpg" alt="Registration System">
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="portfolio-item padd-15">
-                            <a href="https://github.com/NagendraVarmaSangaraju/Python-Chess" target="_blank">
-                                <h2>Chess using Python</h2>
-                                <div class="portfolio-item-inner shadow-dark">
-                                    <div class="portfolio-img">
-                                        <img src="images/Chess.jpeg" alt="Serve & Shine">
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="portfolio-item padd-15">
-                            <a href="https://github.com/NagendraVarmaSangaraju/Python-DJango_Fibonacci" target="_blank">
-                                <h2>Fibonacci Application</h2>
-                                <div class="portfolio-item-inner shadow-dark">
-                                    <div class="portfolio-img">
-                                        <img src="images/Fibonacci.jpeg" alt="Computer Vision ">
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="contact section" id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Contact Me</h2>
-                        </div>
-                    </div>
-                    <h3 class="contact-title padd-15">Have You Any Questions ?</h3>
-                    <h4 class="contact-sub-title padd-15"> I'M AT YOUR SERVICES</h4>
-                    <ul class="contact-info-list row">
-                        <li class="contact-info-item padd-15">
-                            <div class="icon">
-                                <a href="mailto:sangaraju.varma1@gmail.com"><i class="fa fa-solid fa-envelope"></i></a>
-                            </div>
-                            <h4>Email</h4>
-                        </li>
-                        <li class="contact-info-item padd-15">
-                            <div class="icon">
-                                <a href="https://github.com/NagendraVarmaSangaraju" aria-label="github" target="_blank"><i class="fa fa-brands fa-github"></i></a>
-                            </div>
-                            <h4>Github</h4>
-                        </li>
-                        <li class="contact-info-item padd-15">
-                            <div class="icon">
-                                <a href="https://www.linkedin.com/in/nagendra-varma-s-b54a0021b/ target=" target="_blank"><i class="fa fa-brands fa-linkedin"></i></a>
-                            </div>
-                            <h4>Linkedin</h4>
-                        </li>
-                        <li class="contact-info-item padd-15">
-                            <div class="icon">
-                                <a href="https://medium.com/@varmasangaraju4444" target="_blank"><i class="fa fa-brands fa-medium"></i></a>
-                            </div>
-                            <h4>Medium</h4>
-                        </li>
-                    </ul>
-                    <h3 class="contact-title padd-15">SEND ME ANY EMAIL</h3>
-                    <h4 class="contact-sub-title padd-15"> I'M VERY RESPONSIVE TO MASSAGES</h4>
-                    <div class="row">
-                        <form class="contact-form padd-15">
-                            <div class="row">
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Name">
-                                    </div>
-                                </div>
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Subject">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <textarea name="" id="" class="form-control" placeholder="Massage"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <button type="submit" class="btn">Send Massage</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-        </div>
+        <button id="menuBtn"
+          class="inline-flex items-center justify-center rounded-xl border border-slate-200 p-2 text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-200 dark:hover:bg-slate-900 md:hidden"
+          aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </div>
 
-    <div class="style-switcher">
-        <div class="style-switcher-toggler s-icon">
-            <i class="fas fa-cog fa-spin"></i>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950 md:hidden">
+      <div class="mx-auto max-w-6xl px-4 py-3">
+        <div class="grid gap-2">
+          <a class="rounded-xl px-3 py-2 text-slate-700 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-900" href="#about">About</a>
+          <a class="rounded-xl px-3 py-2 text-slate-700 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-900" href="#skills">Skills</a>
+          <a class="rounded-xl px-3 py-2 text-slate-700 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-900" href="#experience">Experience</a>
+          <a class="rounded-xl px-3 py-2 text-slate-700 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-900" href="#projects">Projects</a>
+          <a class="rounded-xl px-3 py-2 text-slate-700 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-900" href="#contact">Contact</a>
         </div>
-        <div class="day-night s-icon">
-            <i class="fas "></i>
-        </div>
-        <h4>Theme Colors</h4>
-        <div class="colors">
-            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
-        </div>
+      </div>
     </div>
+  </header>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
-        integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/script.js"></script>
-    <script src="js/style-switcher.js"></script>
+  <!-- Hero -->
+  <main id="home">
+    <section class="mx-auto max-w-6xl px-4 pt-14 pb-10 md:pt-20">
+      <div class="grid items-center gap-10 md:grid-cols-2">
+        <div>
+          <p class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-3 py-1 text-xs text-slate-600 dark:border-slate-800 dark:bg-slate-950/70 dark:text-slate-300">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+            Available for projects • Python • React • Kafka • Cloud
+          </p>
+
+          <h1 class="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
+            I build scalable <span class="text-indigo-600 dark:text-indigo-400">backend systems</span> and
+            high-performance <span class="text-indigo-600 dark:text-indigo-400">React</span> apps.
+          </h1>
+
+          <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-300">
+            Software Engineer with 10+ years building enterprise applications using Python (Django/Flask) and React.
+            Experienced in real-time systems (Kafka), Kubernetes, and cloud deployments on GCP/AWS.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#contact"
+              class="inline-flex items-center gap-2 rounded-2xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200">
+              <i class="fa-solid fa-paper-plane"></i> Contact Me
+            </a>
+
+            <a href="CV/Varma.pdf"
+              class="inline-flex items-center gap-2 rounded-2xl border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-white dark:hover:bg-slate-900">
+              <i class="fa-solid fa-file-arrow-down"></i> Download CV
+            </a>
+
+            <a href="https://github.com/NagendraVarmaSangaraju" target="_blank"
+              class="inline-flex items-center gap-2 rounded-2xl border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-white dark:hover:bg-slate-900">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+
+          <div class="mt-7 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700 dark:bg-slate-900 dark:text-slate-200">Python</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700 dark:bg-slate-900 dark:text-slate-200">React</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700 dark:bg-slate-900 dark:text-slate-200">Kafka</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700 dark:bg-slate-900 dark:text-slate-200">Kubernetes</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700 dark:bg-slate-900 dark:text-slate-200">GCP / AWS</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700 dark:bg-slate-900 dark:text-slate-200">MySQL / CockroachDB</span>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-indigo-300/40 via-transparent to-emerald-300/30 blur-2xl dark:from-indigo-800/30 dark:to-emerald-700/20"></div>
+
+          <div class="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+            <!-- Update image path below -->
+            <div class="flex items-center gap-4">
+              <img src="images/varma.jpg" alt="Nagendra Varma"
+                class="h-24 w-24 rounded-2xl object-cover ring-1 ring-slate-200 dark:ring-slate-800" />
+              <div>
+                <p class="text-lg font-semibold">Nagendra Varma</p>
+                <p class="text-sm text-slate-600 dark:text-slate-300">Python & React Developer</p>
+                <div class="mt-3 flex gap-3 text-slate-600 dark:text-slate-300">
+                  <a href="mailto:sangaraju.varma1@gmail.com" class="hover:text-slate-900 dark:hover:text-white" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/nagendra-varma-s-b54a0021b/" target="_blank"
+                    class="hover:text-slate-900 dark:hover:text-white" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="https://medium.com/@varmasangaraju4444" target="_blank"
+                    class="hover:text-slate-900 dark:hover:text-white" aria-label="Medium">
+                    <i class="fa-brands fa-medium"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 grid gap-3 sm:grid-cols-3">
+              <div class="rounded-2xl border border-slate-200 p-4 dark:border-slate-800">
+                <p class="text-xs text-slate-600 dark:text-slate-300">Experience</p>
+                <p class="mt-1 text-xl font-bold">10+ yrs</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 p-4 dark:border-slate-800">
+                <p class="text-xs text-slate-600 dark:text-slate-300">Focus</p>
+                <p class="mt-1 text-xl font-bold">React + Python</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 p-4 dark:border-slate-800">
+                <p class="text-xs text-slate-600 dark:text-slate-300">Cloud</p>
+                <p class="mt-1 text-xl font-bold">GCP / AWS</p>
+              </div>
+            </div>
+
+            <div class="mt-6 rounded-2xl bg-slate-50 p-4 text-sm text-slate-700 dark:bg-slate-900 dark:text-slate-200">
+              <p class="font-semibold">Recent work</p>
+              <p class="mt-1">
+                Real-time fuel optimization analytics (Kafka + microservices on Kubernetes) with a fast React dashboard.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="mx-auto max-w-6xl px-4 py-12">
+      <div class="grid gap-8 md:grid-cols-3">
+        <div>
+          <h2 class="text-2xl font-bold">About</h2>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">
+            I build reliable, scalable systems and modern UIs. I enjoy performance tuning, clean architecture, and developer experience.
+          </p>
+        </div>
+
+        <div class="md:col-span-2">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-3xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-950">
+              <p class="text-sm font-semibold">What I do</p>
+              <ul class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                <li><i class="fa-solid fa-check mr-2 text-emerald-500"></i>React apps with performance optimization</li>
+                <li><i class="fa-solid fa-check mr-2 text-emerald-500"></i>Python APIs (Flask/Django), microservices</li>
+                <li><i class="fa-solid fa-check mr-2 text-emerald-500"></i>Kafka streaming pipelines</li>
+                <li><i class="fa-solid fa-check mr-2 text-emerald-500"></i>Kubernetes deployments on GCP/AWS</li>
+              </ul>
+            </div>
+
+            <div class="rounded-3xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-950">
+              <p class="text-sm font-semibold">Quick info</p>
+              <div class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                <p><span class="font-semibold text-slate-900 dark:text-white">Location:</span> Ottawa / Montreal</p>
+                <p><span class="font-semibold text-slate-900 dark:text-white">Role:</span> Python & React Developer</p>
+                <p><span class="font-semibold text-slate-900 dark:text-white">Strengths:</span> SQL, CI/CD, Cloud</p>
+                <p><span class="font-semibold text-slate-900 dark:text-white">Certification:</span> AWS SAA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="mx-auto max-w-6xl px-4 py-12">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold">Skills</h2>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">A practical stack for enterprise and real-time systems.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 grid gap-4 md:grid-cols-2">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-950">
+          <p class="text-sm font-semibold">Frontend</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="rounded-full bg-indigo-50 px-3 py-1 text-xs text-indigo-700 dark:bg-indigo-950 dark:text-indigo-200">React (16+)</span>
+            <span class="rounded-full bg-indigo-50 px-3 py-1 text-xs text-indigo-700 dark:bg-indigo-950 dark:text-indigo-200">React Native</span>
+            <span class="rounded-full bg-indigo-50 px-3 py-1 text-xs text-indigo-700 dark:bg-indigo-950 dark:text-indigo-200">TypeScript</span>
+            <span class="rounded-full bg-indigo-50 px-3 py-1 text-xs text-indigo-700 dark:bg-indigo-950 dark:text-indigo-200">HTML/CSS</span>
+          </div>
+          <p class="mt-4 text-sm text-slate-600 dark:text-slate-300">
+            Focus: component architecture, hooks, memoization, real-time UI, and performance tuning.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-950">
+          <p class="text-sm font-semibold">Backend & Cloud</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs text-emerald-700 dark:bg-emerald-950 dark:text-emerald-200">Python</span>
+            <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs text-emerald-700 dark:bg-emerald-950 dark:text-emerald-200">Django</span>
+            <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs text-emerald-700 dark:bg-emerald-950 dark:text-emerald-200">Flask</span>
+            <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs text-emerald-700 dark:bg-emerald-950 dark:text-emerald-200">Kafka</span>
+            <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs text-emerald-700 dark:bg-emerald-950 dark:text-emerald-200">Kubernetes</span>
+            <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs text-emerald-700 dark:bg-emerald-950 dark:text-emerald-200">GCP / AWS</span>
+            <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs text-emerald-700 dark:bg-emerald-950 dark:text-emerald-200">MySQL / CockroachDB</span>
+          </div>
+          <p class="mt-4 text-sm text-slate-600 dark:text-slate-300">
+            Focus: microservices, distributed systems, CI/CD (Jenkins/GitHub Actions), and DB performance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="mx-auto max-w-6xl px-4 py-12">
+      <h2 class="text-2xl font-bold">Experience</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">Impact-driven work across real-time analytics, modernization, and cloud deployments.</p>
+
+      <div class="mt-6 grid gap-4">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-950">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <p class="text-base font-semibold">Infosys — Software Developer</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Jul 2024 – Present • Montreal, QC</p>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li>• Built production-grade Python/React services for real-time fuel optimization analytics.</li>
+            <li>• Implemented event-driven architecture with Kafka for high-throughput telemetry processing.</li>
+            <li>• Deployed microservices on Kubernetes (GCP), improving reliability and scalability.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-950">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <p class="text-base font-semibold">Boast.AI — Full Stack Developer</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Dec 2021 – Jun 2024 • Ottawa, ON</p>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li>• Led Python 2 → 3 modernization, reducing maintenance overhead.</li>
+            <li>• Built and optimized React frontends, improving UI performance and usability.</li>
+            <li>• Improved CI/CD with Jenkins and GitHub Actions; expanded container adoption.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-950">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <p class="text-base font-semibold">Wipro — Python/Django Developer</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300">2016 – 2021 • India / Canada</p>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li>• Built REST APIs with Django and integrated Kafka pipelines for high-volume ingestion.</li>
+            <li>• Developed secure e-commerce features and React-based UI enhancements.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="mx-auto max-w-6xl px-4 py-12">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold">Projects</h2>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">A few recent builds and experiments.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 grid gap-4 md:grid-cols-3">
+        <a href="https://github.com/NagendraVarmaSangaraju/Accounts" target="_blank"
+          class="group rounded-3xl border border-slate-200 bg-white p-5 hover:shadow-sm dark:border-slate-800 dark:bg-slate-950">
+          <div class="flex items-center justify-between">
+            <p class="font-semibold">Accounting System</p>
+            <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-slate-700 dark:group-hover:text-slate-200"></i>
+          </div>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Backend-focused system with clean data modeling and APIs.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-2.5 py-1 text-xs text-slate-700 dark:bg-slate-900 dark:text-slate-200">Python</span>
+            <span class="rounded-full bg-slate-100 px-2.5 py-1 text-xs text-slate-700 dark:bg-slate-900 dark:text-slate-200">SQL</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/NagendraVarmaSangaraju/Python-Chess" target="_blank"
+          class="group rounded-3xl border border-slate-200 bg-white p-5 hover:shadow-sm dark:border-slate-800 dark:bg-slate-950">
+          <div class="flex items-center justify-between">
+            <p class="font-semibold">Chess (Python)</p>
+            <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-slate-700 dark:group-hover:text-slate-200"></i>
+          </div>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Game logic, rules engine, and clean architecture patterns.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-2.5 py-1 text-xs text-slate-700 dark:bg-slate-900 dark:text-slate-200">Python</span>
+            <span class="rounded-full bg-slate-100 px-2.5 py-1 text-xs text-slate-700 dark:bg-slate-900 dark:text-slate-200">OOP</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/NagendraVarmaSangaraju/Python-DJango_Fibonacci" target="_blank"
+          class="group rounded-3xl border border-slate-200 bg-white p-5 hover:shadow-sm dark:border-slate-800 dark:bg-slate-950">
+          <div class="flex items-center justify-between">
+            <p class="font-semibold">Fibonacci App</p>
+            <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-slate-700 dark:group-hover:text-slate-200"></i>
+          </div>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Django-based example with routing, views, and deployment-ready setup.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-2.5 py-1 text-xs text-slate-700 dark:bg-slate-900 dark:text-slate-200">Django</span>
+            <span class="rounded-full bg-slate-100 px-2.5 py-1 text-xs text-slate-700 dark:bg-slate-900 dark:text-slate-200">Web</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mx-auto max-w-6xl px-4 py-12">
+      <div class="grid gap-8 md:grid-cols-2">
+        <div>
+          <h2 class="text-2xl font-bold">Contact</h2>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">
+            Want to talk about a project or role? Send an email — I reply fast.
+          </p>
+
+          <div class="mt-6 space-y-3 text-sm">
+            <p class="flex items-center gap-2 text-slate-700 dark:text-slate-200">
+              <i class="fa-solid fa-envelope text-slate-400"></i>
+              <a class="hover:underline" href="mailto:sangaraju.varma1@gmail.com">sangaraju.varma1@gmail.com</a>
+            </p>
+            <p class="flex items-center gap-2 text-slate-700 dark:text-slate-200">
+              <i class="fa-brands fa-linkedin text-slate-400"></i>
+              <a class="hover:underline" target="_blank" href="https://www.linkedin.com/in/nagendra-varma-s-b54a0021b/">LinkedIn</a>
+            </p>
+            <p class="flex items-center gap-2 text-slate-700 dark:text-slate-200">
+              <i class="fa-brands fa-github text-slate-400"></i>
+              <a class="hover:underline" target="_blank" href="https://github.com/NagendraVarmaSangaraju">GitHub</a>
+            </p>
+          </div>
+        </div>
+
+        <form class="rounded-3xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-950"
+          action="mailto:sangaraju.varma1@gmail.com" method="post" enctype="text/plain">
+          <p class="text-sm font-semibold">Send a message</p>
+
+          <div class="mt-4 grid gap-3">
+            <input class="w-full rounded-2xl border border-slate-200 bg-transparent px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-800"
+              type="text" name="name" placeholder="Your name" required>
+
+            <input class="w-full rounded-2xl border border-slate-200 bg-transparent px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-800"
+              type="email" name="email" placeholder="Your email" required>
+
+            <input class="w-full rounded-2xl border border-slate-200 bg-transparent px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-800"
+              type="text" name="subject" placeholder="Subject" required>
+
+            <textarea class="min-h-[120px] w-full rounded-2xl border border-slate-200 bg-transparent px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-800"
+              name="message" placeholder="Message" required></textarea>
+
+            <button class="rounded-2xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white hover:bg-indigo-500">
+              <i class="fa-solid fa-paper-plane mr-2"></i> Send
+            </button>
+
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Note: this uses your email client (mailto). If you want a real form submission, I can add a free backend (Formspree/Netlify) or a small Flask endpoint.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="mx-auto max-w-6xl px-4 pb-10 pt-4">
+      <div class="flex flex-col items-center justify-between gap-3 border-t border-slate-200 pt-6 text-xs text-slate-500 dark:border-slate-800 dark:text-slate-400 sm:flex-row">
+        <p>© <span id="year"></span> Nagendra Varma. All rights reserved.</p>
+        <p>Built with HTML + TailwindCSS.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Theme toggle (persist)
+    const root = document.documentElement;
+    const themeBtn = document.getElementById('themeBtn');
+
+    function setTheme(mode) {
+      if (mode === 'dark') root.classList.add('dark');
+      else root.classList.remove('dark');
+      localStorage.setItem('theme', mode);
+    }
+
+    const saved = localStorage.getItem('theme');
+    if (saved) setTheme(saved);
+    else {
+      // default based on system preference
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(prefersDark ? 'dark' : 'light');
+    }
+
+    themeBtn?.addEventListener('click', () => {
+      const isDark = root.classList.contains('dark');
+      setTheme(isDark ? 'light' : 'dark');
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
